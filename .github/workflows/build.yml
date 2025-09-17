@@ -1,0 +1,49 @@
+name: Build
+permissions:
+  contents: read
+  actions: read
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build-linux-x64:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build and Run
+        run: |
+          g++ -o main_linux_x64 main_linux_x64.cpp
+          ./main_linux_x64
+
+  build-mac-x64:
+    runs-on: macos-15-large
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build and Run
+        run: |
+          g++ -o main_mac_x64 main_mac_x64.cpp
+          ./main_mac_x64
+  build-mac-arm64:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build and Run
+        run: |
+          g++ -o main_mac_arm64 main_mac_arm64.cpp
+          ./main_mac_arm64
+  build-winx-64:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build and Run
+        run: |
+          g++ -o main_winx_64 main_winx_64.cpp
+          ./main_winx_64
