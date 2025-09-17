@@ -1,7 +1,7 @@
 # Hello From the Kernel
 
 This is a simple Hello World program, but with one twist - **the program doesn't use any standard libraries**.
-> No #include <iosteam> at all!
+> No `#include <iostream>` at all!
 
 ## Build
 
