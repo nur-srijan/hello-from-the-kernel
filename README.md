@@ -19,7 +19,7 @@ g++ -o main_mac_arm64 main_mac_arm64.cpp
 ```
 ### Windows x64 (through WSL or MinGW)
 ```bash
-g++ -o main_winx_64 main_winx_64.cpp
+g++ -o main_win_x64 main_win_x64.cpp
 ```
 
 ## Run
@@ -38,7 +38,7 @@ g++ -o main_winx_64 main_winx_64.cpp
 ```
 ### Windows x64
 ```bash
-./main_winx_64
+./main_win_x64
 ```
 
 ## Notes
