@@ -1,4 +1,4 @@
-# Hello World
+# Hello From the Kernel
 
 This is a simple Hello World program for different architectures but one twist, the program doesn't use any standard library functions.
 
